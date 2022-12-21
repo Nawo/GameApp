@@ -1,0 +1,5 @@
+D:/Projekty/Game/Build/CMakeFiles/edit_cache.dir
+D:/Projekty/Game/Build/CMakeFiles/rebuild_cache.dir
+D:/Projekty/Game/Build/Src/CMakeFiles/GameApp.dir
+D:/Projekty/Game/Build/Src/CMakeFiles/edit_cache.dir
+D:/Projekty/Game/Build/Src/CMakeFiles/rebuild_cache.dir
