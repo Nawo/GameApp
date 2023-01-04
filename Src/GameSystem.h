@@ -1,47 +1,33 @@
-#ifndef GAMESYSTEM_H
-#define GAMESYSTEM_H
+#pragma once
 
-#define PI 3.14159265359
-
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
-
-#include <time.h>
-#include <iostream>
-#include <vector>
-#include <string>
-#include <cmath>
-#include <cstdlib>
-#include <stack>
-#include <map>
-#include <math.h>
-#include <random>
-#include <sstream>
-//#include <X11/extensions/Xrandr.h> Linux
+#include "State.h"
+#include "GameState.h"
+#include "MainMenuState.h"
+#include "SettingsState.h"
 
 class GameSystem
 {
 
 private:
 
-	sf::RenderWindow* window;
-	sf::VideoMode videoMode;
-	sf::Event event;
+	sf::RenderWindow* window_;
+	sf::VideoMode videoMode_;
+	sf::Event event_;
 
-	sf::Clock dtClock;
-	float dt;
+	sf::Clock dtClock_;
+	float dt_;
+
+	std::vector<State*> states_;
+
+	State* statePtr_;
 
 	void initWindow();
+	void initStates();
 
 public:
 
 	GameSystem();
 	virtual ~GameSystem();
-
-	void endApplication();
 
 	void updateDt();
 	void updateEvents();
@@ -52,5 +38,3 @@ public:
 	void run();
 
 };
-
-#endif

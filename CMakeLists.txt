@@ -18,4 +18,4 @@ project(GameApp)
 # file(GLOB SFML_LIBS Lib/lib/*)
 # target_link_libraries(app ${SFML_LIBS})
 
-add_subdirectory(src)
+add_subdirectory(Src)
